@@ -13,3 +13,27 @@
  *= require_tree .
  *= require_self
  */
+
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+@media (min-width: 768px) {
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+    }
+
+    .navbar .navbar-collapse {
+        text-align: center;
+    }
+}
+
+body {
+    background: grey url('dvbbs2.jpeg') no-repeat center;
+    background-attachment: fixed;
+
+    background-size: cover;
+
+}
