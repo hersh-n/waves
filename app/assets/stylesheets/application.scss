@@ -74,6 +74,7 @@ a {
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
+    font-family: 'Lovelo Black';
 }
 
 a:hover,
@@ -87,9 +88,12 @@ a:focus {
     background-color: #000000;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1 {
     font-family: 'Lovelo Line Light';
+    font-size: 53px;
 }
+
+h2,h3,h4,h5,h6
 
 p {
     font-family: 'Lovelo Black';
@@ -288,12 +292,30 @@ footer {
 .close {
     width: 100%;
     height: 3em;
-    margin-bottom: 0.5em;
 }
 
 .fa-times {
     float: right;
     margin-right: 0.2em;
     color: white;
+}
+
+.close:hover, .close:focus {
+    float: right;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: 0.2;
+    cursor: auto;
+}
+
+.fa-times:hover, .fa-times:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
 }
 
