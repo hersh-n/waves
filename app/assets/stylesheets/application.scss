@@ -49,9 +49,12 @@ hr {
     margin-bottom: 15px;
 }
 
+.navbar-inverse .navbar-nav > li > a {
+    color: white;
+}
 
 a {
-    color: #9c27b0;
+    color: white;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -209,6 +212,16 @@ footer {
     .navbar .navbar-collapse {
         text-align: center;
     }
+}
+
+#three {
+    background-color: white;
+}
+.navbar {
+    background-color: #222;
+    border: none;
+    transition: 3s;
+    color: white;
 }
 
 
