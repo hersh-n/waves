@@ -46,3 +46,9 @@ $(function() {
       $(this).addClass("active");
    });
 });
+
+$('.fa-times').click(function() {
+
+	$('.jumbotron').css({"display": "none"});
+});
+
