@@ -52,3 +52,15 @@ $('.fa-times').click(function() {
 	$('.jumbotron').css({"display": "none"});
 });
 
+$('.nav a').on('click', function(){
+    $('.btn-navbar').click(); //bootstrap 2.x
+    $('.navbar-toggle').click() //bootstrap 3.x by Richard
+});
+
+
+$(document).ready(function () {
+  $(".navbar-nav li a").click(function(event) {
+    $(".navbar-collapse").collapse('hide');
+  });
+});
+
