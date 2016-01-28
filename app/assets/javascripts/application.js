@@ -64,3 +64,45 @@ $(document).ready(function(){
     $(this).scrollTop(0);
 });
 
+
+  $('.player').click(function(){ //Use the position to seek when clicked
+    $('.position').css('width',scrub+"px");
+    var seek = player.duration*(scrub/pWidth);
+
+    //Seeking to the start would be a previous?
+    if ( seek < player.duration * .05 ) {
+      player.prev();
+    } else if ( seek > player.duration * .99 ) {
+      player.next();
+    } else {
+      player.seekTo(seek);
+    }
+
+  });
+
+   function setInfo() {
+    player.getCurrentSound(function(song) {
+      console.log(song);
+
+      $('.waveform').css('background-image', "url('" + song.waveform_url + "')");
+      $('.player').css('background-image', "url('" + song.artwork_url.replace('-large', '-t500x500') + "')");
+
+      var info = song.title;
+      $('.info').html(info);
+
+      player.current = song;
+    });
+
+    player.getDuration(function(value){
+      player.duration = value;
+    });
+
+    player.isPaused(function(bool){
+      player.getPaused = bool;
+    });
+  }
+
+});
+
+
+
