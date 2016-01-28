@@ -52,15 +52,15 @@ $('.fa-times').click(function() {
 	$('.jumbotron').css({"display": "none"});
 });
 
-$('.nav a').on('click', function(){
-    $('.btn-navbar').click(); //bootstrap 2.x
-    $('.navbar-toggle').click() //bootstrap 3.x by Richard
+$(function() {
+    $('.nav a').on('click', function(){
+        if($('.navbar-toggle').css('display') !='none'){
+            $(".navbar-toggle").trigger( "click" );
+        }
+    });
 });
 
-
-$(document).ready(function () {
-  $(".navbar-nav li a").click(function(event) {
-    $(".navbar-collapse").collapse('hide');
-  });
+$(document).ready(function(){
+    $(this).scrollTop(0);
 });
 
