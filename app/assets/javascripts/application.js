@@ -102,5 +102,29 @@ $(document).ready(function(){
     });
   }
 
+function scrollToAnchor(aid){
+    var aTag = $("a[name='"+ aid +"']");
+    $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+}
+
+$("#link-first").click(function() {
+   scrollToAnchor('idfirst');
+   $('.jumbotron').css({"display": "block"});
+});
+
+$("#link-two").click(function() {
+   scrollToAnchor('idtwo');
+});
+
+$("#link-three").click(function() {
+   scrollToAnchor('idthree');
+});
+
+$("#link-last").click(function() {
+   scrollToAnchor('idlast');
+});
+
+
+
 
 
