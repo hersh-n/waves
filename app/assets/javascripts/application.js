@@ -59,12 +59,6 @@ $(function() {
         }
     });
 });
-
-$(document).ready(function(){
-    $(this).scrollTop(0);
-});
-
-
   $('.player').click(function(){ //Use the position to seek when clicked
     $('.position').css('width',scrub+"px");
     var seek = player.duration*(scrub/pWidth);
@@ -124,7 +118,9 @@ $("#link-last").click(function() {
    scrollToAnchor('idlast');
 });
 
-
+$(window).on('beforeunload', function() {
+    $(window).scrollTop(0);
+});
 
 
 
