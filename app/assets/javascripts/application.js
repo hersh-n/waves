@@ -102,7 +102,5 @@ $(document).ready(function(){
     });
   }
 
-});
-
 
 
