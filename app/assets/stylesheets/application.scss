@@ -350,7 +350,14 @@ footer {
 }
 
 #three {
-    background: #222 url('bg-pattern-gray-lightest.png')
+    background: #222 url('white_background.png') no-repeat top center;
+
+}
+
+@media (max-width: 1193px) {
+    #three {
+    background: url('bg-pattern-gray-lightest.png');
+  }
 }
 
 
