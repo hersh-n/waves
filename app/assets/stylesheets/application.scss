@@ -126,6 +126,11 @@ footer {
 .no-padding {
     padding: 0;
 }
+.container {
+    h2 {
+    color: white;
+}
+}
 
 
 
@@ -409,6 +414,19 @@ footer {
 }
 
 hr {
+
+    #expander {
+      position:absolute;
+      width: 0;
+      height: 17px;
+      background-color: #FFF;
+      border-top: 1px solid red;
+      z-index: 999;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+      -webkit-animation: expandline 2s;
+}
     width: 80%;
     border-color: #f3504c;
     max-width: 100%;
